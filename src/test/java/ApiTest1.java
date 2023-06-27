@@ -30,5 +30,9 @@ public class ApiTest1 {
         response.then().assertThat().statusCode(is(200));
         response.then().log().body();
         response.then().assertThat().body("localities.locality.postcode[1]",equalTo(8002));
+
+//        var statuscode = response.then().extract().path("localities.locality.postcode");
+//        System.out.println(statuscode);
+
     }
 }
